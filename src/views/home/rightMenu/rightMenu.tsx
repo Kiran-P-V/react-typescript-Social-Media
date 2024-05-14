@@ -3,6 +3,7 @@ import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
 import menuItems from "../menuItems";
 import MenuItemWrapper from "../../../components/menuItemWrapper/menuItemWrapper";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import UserProfilePlaceholder from "../../../components/userProfilePlaceholder/userProfilePlaceholder";
 
 const RightMenu = () => {
   return (
@@ -51,7 +52,15 @@ const RightMenu = () => {
         </p>
         {menuItems?.rightMenuContactItems?.map((items) => (
           <MenuItemWrapper>
-            <Box className="">{items?.icon}</Box>
+            <Box className="">
+              <UserProfilePlaceholder
+                online
+                h="50%"
+                w="1.7rem"
+                iconHeight="1.6rem"
+                image={items?.icon}
+              />
+            </Box>
             <Box className="">{items?.name}</Box>
           </MenuItemWrapper>
         ))}

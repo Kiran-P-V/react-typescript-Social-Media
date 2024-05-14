@@ -17,7 +17,12 @@ const SliderCard = () => {
           className="bg-slate-400 min-w-36 rounded-xl p-1"
         >
           <Box className="rounded-full bg-blue-600 h-10 w-10 m-3 flex justify-center items-center ">
-            <UserProfilePlaceholder h="80%" w="2.1rem" iconHeight="1.6rem" />
+            <UserProfilePlaceholder
+              image={item?.profileImg}
+              h="80%"
+              w="2.1rem"
+              iconHeight="1.6rem"
+            />
           </Box>
           <p className="flex justify-start items-end w-full h-[72%] text-white font-semibold text-sm ml-2">
             {item?.userName}

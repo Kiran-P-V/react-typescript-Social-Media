@@ -6,7 +6,7 @@ import MenuItemWrapper from "../../../../components/menuItemWrapper/menuItemWrap
 const PostCreator = () => {
   return (
     <>
-      <Box className="bg-white w-[65%] h-32 rounded-lg shadow-md px-3">
+      <Box className="bg-white w-[65%] h-32 rounded-lg shadow-md">
         <Box className="flex w-full h-[49%] justify-center items-center gap-2">
           <UserProfilePlaceholder h="63%" w="2.5rem" iconHeight="2rem" />
           <input

@@ -21,6 +21,8 @@ import GiftIcon from "../../assets/icons/rightMenuIcons/giftIcon.png";
 import LiveVideoIcon from "../../assets/icons/middleSectionIcons/LiveVideo.png";
 import PhotoOrVideoIcon from "../../assets/icons/middleSectionIcons/photoOrVideo.png";
 import FeelingOrActivityIcon from "../../assets/icons/middleSectionIcons/FeelingOrActivity.png";
+import profile1 from "../../assets/dummyDatas/ProfileImages/profile1.jpg";
+import Profile2 from "../../assets/dummyDatas/ProfileImages/Profile2.jpg";
 
 const menuItems = {
   leftMenuMainItems: [
@@ -157,53 +159,53 @@ const menuItems = {
     {
       id: 1,
       name: "Nivin Narayan",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 2,
       name: "Shrey Saxena",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: profile1,
     },
     {
       id: 3,
       name: "Raquel S",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 4,
       name: "Anwer Muh'd",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 5,
       name: "Sarah Jacob",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 6,
       name: "Aleena Thomas",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 7,
       name: "Angela S",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 8,
       name: "Andriya Ben",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: "",
     },
     {
       id: 8,
       name: "Jonathan",
-      icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
+      icon: Profile2,
     },
-    // {
-    //   id: 7,
-    //   name: "Reena Gomaz",
-    //   icon: <UserProfilePlaceholder h="50%" w="1.6rem" iconHeight="1.6rem" />,
-    // },
+    {
+      id: 7,
+      name: "Reena Gomaz",
+      icon: "",
+    },
   ],
   middlePostCreatorItems: [
     {
