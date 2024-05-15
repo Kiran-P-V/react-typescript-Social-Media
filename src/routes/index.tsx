@@ -1,18 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Navbar from "../layouts/navbar/navbar";
-import Home from "../views/home/home";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navbar />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-    ],
-  },
-]);
+import navbarRoute from "./navbarRoutes";
+import authRoute from "./authRoutes";
+
+const router = createBrowserRouter([navbarRoute, authRoute]);
 
 export default router;
