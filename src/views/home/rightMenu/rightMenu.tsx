@@ -57,7 +57,7 @@ const RightMenu = () => {
                 online
                 h="50%"
                 w="1.7rem"
-                iconHeight="1.6rem"
+                iconHeight="1.7rem"
                 image={items?.icon}
               />
             </Box>
