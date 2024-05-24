@@ -1,5 +1,6 @@
 import Navbar from "../layouts/navbar/navbar";
 import Home from "../views/home/home";
+import MessengerPage from "../views/messenger/messenger";
 
 const navbarRoute = {
   path: "/",
@@ -8,6 +9,10 @@ const navbarRoute = {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/messenger",
+      element: <MessengerPage />,
     },
   ],
 };
