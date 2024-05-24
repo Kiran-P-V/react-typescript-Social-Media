@@ -19,6 +19,8 @@ const CommonPopupCard = ({
   return (
     <>
       <Popover
+        className="mt-1 "
+        anchorPosition={{ left: 20, top: 20 }}
         id={id}
         open={open}
         anchorEl={anchorEl}
@@ -28,9 +30,9 @@ const CommonPopupCard = ({
           horizontal: "left",
         }}
       >
-        <Typography sx={{ p: 2 }}>
+        <div className="p-1">
           {children ? children : "The content of the Popover."}
-        </Typography>
+        </div>
       </Popover>
     </>
   );

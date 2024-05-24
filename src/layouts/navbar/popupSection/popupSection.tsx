@@ -5,47 +5,77 @@ import CommonPopupCard from "../../../components/commonPopupCard/commonPopupCard
 import { TbGridDots } from "react-icons/tb";
 import { RiMessengerFill } from "react-icons/ri";
 import { IoNotifications } from "react-icons/io5";
-import { HiMiniUser } from "react-icons/hi2";
 import UserProfilePlaceholder from "../../../components/userProfilePlaceholder/userProfilePlaceholder";
+import ButtonWrapper from "./components/buttonWrapper";
+import Messenger from "./templates/messenger";
 
 const PopupSection = () => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );
+  const [type, setType] = React.useState("");
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleTemplate = (type: string) => {
+    switch (type) {
+      case "messenger":
+        return <Messenger />;
+      case "notification":
+        return <>Notification</>;
+    }
+  };
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    type: string
+  ) => {
     setAnchorEl(event.currentTarget);
+    setType(type);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // test useEffect
+  React.useEffect(() => {
+    console.log(anchorEl);
+  }, [anchorEl]);
 
   return (
     <>
-      {/* <Button
-            aria-describedby={id}
-            variant="contained"
-            onClick={handleClick}
-          >
-            Open Popover
-          </Button> */}
       <Box className="w-full flex justify-end items-center gap-2 px-3">
-        <Box className="bg-[#f0f2f5] rounded-full h-[70%] w-10 flex justify-center items-center hover:bg-gray-200">
+        <ButtonWrapper
+          onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+            handleClick(e, "")
+          }
+        >
           <TbGridDots fontSize="1.5rem" />
-        </Box>
-        <Box className="bg-[#f0f2f5] rounded-full h-[70%] w-10 flex justify-center items-center hover:bg-gray-200">
-          <RiMessengerFill fontSize="1.5rem" />
-        </Box>
-        <Box className="bg-[#f0f2f5] rounded-full h-[70%] w-10 flex justify-center items-center hover:bg-gray-200">
-          <IoNotifications fontSize="1.5rem" />
-        </Box>
+        </ButtonWrapper>
+        <ButtonWrapper
+          onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+            handleClick(e, "messenger")
+          }
+        >
+          <RiMessengerFill
+            className={`${type === "messenger" && "text-blue-600"}`}
+            fontSize="1.5rem"
+          />
+        </ButtonWrapper>
+        <ButtonWrapper
+          onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+            handleClick(e, "notification")
+          }
+        >
+          <IoNotifications
+            className={`${type === "notification" && "text-blue-600"}`}
+            fontSize="1.5rem"
+          />
+        </ButtonWrapper>
         <UserProfilePlaceholder h="70%" w="2.5rem" iconHeight="2rem" />
         <CommonPopupCard id={id} anchorEl={anchorEl} handleClose={handleClose}>
-          {null}
+          {handleTemplate(type)}
         </CommonPopupCard>
       </Box>
     </>

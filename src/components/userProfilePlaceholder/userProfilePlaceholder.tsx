@@ -9,11 +9,15 @@ type PlaceholderProps = {
   iconHeight: string;
   online?: boolean;
   image?: string;
+  profileHeight?: string;
+  profileWidth?: string;
 };
 
 const UserProfilePlaceholder = ({
   h,
   w,
+  profileHeight,
+  profileWidth,
   iconHeight,
   online,
   image,
@@ -21,7 +25,12 @@ const UserProfilePlaceholder = ({
   const PlaceholderIcon = <HiMiniUser fontSize={iconHeight} color="white" />;
 
   const PlaceholderAvatar = (
-    <Avatar className="max-w-[1.8rem] max-h-[1.8rem]" alt="User" src={image} />
+    <img
+      style={{ minHeight: profileHeight, minWidth: profileWidth }}
+      className={`rounded-full`}
+      alt="User"
+      src={image}
+    />
   );
 
   const StyledBadge = styled(Badge)(({ theme }) => ({

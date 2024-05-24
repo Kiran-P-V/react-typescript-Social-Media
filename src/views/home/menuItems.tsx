@@ -224,6 +224,58 @@ const menuItems = {
       icon: <img src={FeelingOrActivityIcon} className="h-5" />,
     },
   ],
+  messengerItems: [
+    {
+      id: 1,
+      name: "Nivin Narayan",
+      icon: "",
+    },
+    {
+      id: 2,
+      name: "Shrey Saxena",
+      icon: profile1,
+    },
+    {
+      id: 3,
+      name: "Raquel S",
+      icon: "",
+    },
+    {
+      id: 4,
+      name: "Anwer Muh'd",
+      icon: "",
+    },
+    {
+      id: 5,
+      name: "Sarah Jacob",
+      icon: "",
+    },
+    {
+      id: 8,
+      name: "Jonathan",
+      icon: Profile2,
+    },
+    {
+      id: 6,
+      name: "Aleena Thomas",
+      icon: "",
+    },
+    {
+      id: 7,
+      name: "Angela S",
+      icon: "",
+    },
+    {
+      id: 8,
+      name: "Andriya Ben",
+      icon: "",
+    },
+    {
+      id: 7,
+      name: "Reena Gomaz",
+      icon: "",
+    },
+  ],
 };
 
 export default menuItems;

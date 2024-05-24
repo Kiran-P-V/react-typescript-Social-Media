@@ -9,7 +9,7 @@ const LogoAndSearch = () => {
         <img className="w-10 h-10" src={Logo} />
         <input
           placeholder="Search Facebook"
-          className="rounded-full bg-gray-200 h-[70%] w-[50%] px-4"
+          className="rounded-full bg-gray-100 h-[70%] w-[50%] px-4 outline-none"
         />
       </Box>
     </>

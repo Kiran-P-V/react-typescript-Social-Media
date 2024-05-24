@@ -57,6 +57,8 @@ const RightMenu = () => {
                 online
                 h="50%"
                 w="1.7rem"
+                profileHeight="1.8rem"
+                profileWidth="1.8rem"
                 iconHeight="1.7rem"
                 image={items?.icon}
               />
