@@ -5,8 +5,11 @@ import MapsUgcRoundedIcon from "@mui/icons-material/MapsUgcRounded";
 import MenuItemWrapper from "../../../../components/menuItemWrapper/menuItemWrapper";
 import menuItems from "../../../../views/home/menuItems";
 import UserProfilePlaceholder from "../../../../components/userProfilePlaceholder/userProfilePlaceholder";
+import MiniButtonWrapper from "./components/miniButtonWrapper";
+import { useNavigate } from "react-router-dom";
 
 const Messenger = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box className="min-w-[350px]">
@@ -15,24 +18,24 @@ const Messenger = () => {
             <p className="text-2xl font-bold">Chats</p>
           </Box>
           <Box className="w-full flex justify-end items-center gap-2">
-            <Box className="h-7 w-7 hover:bg-gray-300 rounded-full flex justify-center items-center">
+            <MiniButtonWrapper>
               <MoreHorizRoundedIcon
                 className="cursor-pointer text-gray-500"
                 fontSize="small"
               />
-            </Box>
-            <Box className="h-7 w-7 hover:bg-gray-300 rounded-full flex justify-center items-center">
+            </MiniButtonWrapper>
+            <MiniButtonWrapper onClick={() => navigate("/messenger")}>
               <AllOutRoundedIcon
                 className="cursor-pointer text-gray-500"
                 fontSize="small"
               />
-            </Box>
-            <Box className="h-7 w-7 hover:bg-gray-300 rounded-full flex justify-center items-center">
+            </MiniButtonWrapper>
+            <MiniButtonWrapper>
               <MapsUgcRoundedIcon
                 className="cursor-pointer text-gray-500"
                 fontSize="small"
               />
-            </Box>
+            </MiniButtonWrapper>
           </Box>
         </Box>
         <Box className="h-12 mt-3 px-2">
