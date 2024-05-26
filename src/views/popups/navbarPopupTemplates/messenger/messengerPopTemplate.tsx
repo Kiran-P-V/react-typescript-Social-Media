@@ -8,7 +8,7 @@ import UserProfilePlaceholder from "../../../../components/userProfilePlaceholde
 import MiniButtonWrapper from "./components/miniButtonWrapper";
 import { useNavigate } from "react-router-dom";
 
-const Messenger = () => {
+const MessengerPopTemplate = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -78,4 +78,4 @@ const Messenger = () => {
   );
 };
 
-export default Messenger;
+export default MessengerPopTemplate;

@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/components/commonPopupCard/commonPopupCard.tsx"],
+  // "include": ["src", "src/components/commonPopupCard/commonPopupCard.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

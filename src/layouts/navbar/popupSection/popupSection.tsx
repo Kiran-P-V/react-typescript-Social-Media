@@ -7,7 +7,7 @@ import { RiMessengerFill } from "react-icons/ri";
 import { IoNotifications } from "react-icons/io5";
 import UserProfilePlaceholder from "../../../components/userProfilePlaceholder/userProfilePlaceholder";
 import ButtonWrapper from "./components/buttonWrapper";
-import Messenger from "./templates/messenger";
+import MessengerPopTemplate from "../../../views/popups/navbarPopupTemplates/messenger/messengerPopTemplate";
 
 const PopupSection = () => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
@@ -21,7 +21,7 @@ const PopupSection = () => {
   const handleTemplate = (type: string) => {
     switch (type) {
       case "messenger":
-        return <Messenger />;
+        return <MessengerPopTemplate />;
       case "notification":
         return <>Notification</>;
     }
