@@ -47,6 +47,7 @@ const PopupSection = () => {
     <>
       <Box className="w-full flex justify-end items-center gap-2 px-3">
         <ButtonWrapper
+          height="70%"
           onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
             handleClick(e, "")
           }
@@ -54,6 +55,7 @@ const PopupSection = () => {
           <TbGridDots fontSize="1.5rem" />
         </ButtonWrapper>
         <ButtonWrapper
+          height="70%"
           onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
             handleClick(e, "messenger")
           }
@@ -64,6 +66,7 @@ const PopupSection = () => {
           />
         </ButtonWrapper>
         <ButtonWrapper
+          height="70%"
           onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
             handleClick(e, "notification")
           }
