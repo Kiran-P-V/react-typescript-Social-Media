@@ -1,12 +1,14 @@
-import { Box, Divider } from "@mui/material";
+import { Box, Divider, useMediaQuery } from "@mui/material";
 import UserProfilePlaceholder from "../../../../components/userProfilePlaceholder/userProfilePlaceholder";
 import menuItems from "../../menuItems";
 import MenuItemWrapper from "../../../../components/menuItemWrapper/menuItemWrapper";
 
 const PostCreator = () => {
+  const matchesXs = useMediaQuery("(min-width:500px)");
+
   return (
     <>
-      <Box className="bg-white w-[65%] h-32 rounded-lg shadow-md">
+      <Box className="bg-white w-[95%] sm:w-[80%] h-32 rounded-lg shadow-md">
         <Box className="flex w-full h-[49%] justify-center items-center gap-2">
           <UserProfilePlaceholder h="63%" w="2.5rem" iconHeight="2rem" />
           <input
@@ -21,7 +23,7 @@ const PostCreator = () => {
           {menuItems?.middlePostCreatorItems?.map((items) => (
             <MenuItemWrapper className="justify-center">
               <Box>{items?.icon}</Box>
-              <Box>{items?.name}</Box>
+              {matchesXs && <Box>{items?.name}</Box>}
             </MenuItemWrapper>
           ))}
         </Box>

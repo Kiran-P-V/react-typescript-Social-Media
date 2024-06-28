@@ -29,7 +29,7 @@ const StorySlider = () => {
 
   return (
     <>
-      <Box className="relative w-[80%]">
+      <Box className="relative w-full  sm:w-[80%]">
         <Box
           onClick={scrollLeft}
           className="absolute bg-white rounded-full w-10 h-10 top-[50%] left-5 flex justify-center items-center cursor-pointer"

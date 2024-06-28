@@ -13,7 +13,7 @@ import MenuItemWrapper from "../../../../components/menuItemWrapper/menuItemWrap
 const PostCard = () => {
   return (
     <>
-      <Box className="bg-white w-[65%] rounded-lg shadow-md h-full">
+      <Box className="bg-white w-[95%] sm:w-[80%] rounded-lg shadow-md h-full">
         <Box className="flex p-3 items-center gap-2">
           <UserProfilePlaceholder h="2.5rem" w="2.5rem" iconHeight="2rem" />
           <Box className="flex justify-center  flex-col">
@@ -46,7 +46,9 @@ const PostCard = () => {
                 src={MiniLoveIcon}
               />
             </AvatarGroup>
-            <p className="font-light">Muhammed Sinan, Shi Hab and 10K others</p>
+            <p className="font-light text-wrap">
+              Muhammed Sinan, Shi Hab and 10K others
+            </p>
           </Box>
           <Box className="flex justify-around w-[20%] items-center gap-2">
             <Box className="flex items-center gap-1">
